@@ -141,25 +141,26 @@ export default function UGCAdAgencyLandingPage() {
     { name: "James W.", role: "Shopify Founder", text: "This made it easier for us to launch more creatives every week without slowing down.", rating: 5 },
     { name: "Charlotte D.", role: "Growth Lead", text: "Strong direct-response structure. It did not feel like random content. It felt built for ads.", rating: 5 },
   ];
-
-  const samples = [
-    {
-      title: "Skincare Hook Test",
-      angle: "Problem / solution",
-      desc: "Fast-moving TikTok-style creative built to stop the scroll and frame the product in the first 2 seconds.",
-    },
-    {
-      title: "Perfume Demo",
-      angle: "Convenience / demo",
-      desc: "Creator-style ad concept showing the product in action with a simple payoff-driven narrative.",
-    },
-    {
-      title: "Beauty Testimonial",
-      angle: "UGC testimonial",
-      desc: "Trust-led ad concept designed to feel native to TikTok while staying conversion focused.",
-    },
-  ];
-
+const samples = [
+  {
+    title: "Skincare Hook Test",
+    angle: "Problem / solution",
+    desc: "Fast-moving TikTok-style creative built to stop the scroll and frame the product in the first 2 seconds.",
+    videoUrl: "/demo/skincare-hook-test.mp4",
+  },
+  {
+    title: "Perfume Demo",
+    angle: "Convenience / demo",
+    desc: "Creator-style ad concept showing the product in action with a simple payoff-driven narrative.",
+    videoUrl: "/demo/perfume-demo.mp4",
+  },
+  {
+    title: "Beauty Testimonial",
+    angle: "UGC testimonial",
+    desc: "Trust-led ad concept designed to feel native to TikTok while staying conversion focused.",
+    videoUrl: "/demo/beauty-testimonial.mp4",
+  },
+];
   const process = [
     { step: "01", title: "We study your product", text: "We find the strongest hooks, pain points, buyer desires, and ad angles for your offer." },
     { step: "02", title: "We build your creatives", text: "We script, produce, and edit TikTok-native UGC ads designed for fast testing and creative volume." },
@@ -513,9 +514,17 @@ export default function UGCAdAgencyLandingPage() {
               <motion.div key={sample.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: index * 0.08 }} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 liquid-glass">
                 <div className="flex items-center justify-center border-b border-white/10 bg-gradient-to-br from-neutral-800 via-neutral-900 to-black p-6">
                   <div className="aspect-[9/16] w-full max-w-[240px] rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl">
-                    <div className="flex h-full items-center justify-center rounded-[1.5rem] border border-white/10 bg-black/55 px-5 text-center">
-                      <p className="text-white/60">9:16 video preview</p>
-                    </div>
+                    <div className="h-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/55">
+  <video
+    className="h-full w-full object-cover"
+    src={sample.videoUrl}
+    autoPlay
+    muted
+    loop
+    playsInline
+    controls
+  />
+</div>
                   </div>
                 </div>
                 <div className="p-6">
@@ -626,21 +635,27 @@ export default function UGCAdAgencyLandingPage() {
               <p className="mb-4 text-sm uppercase tracking-[0.25em] text-emerald-300/80">Contact us</p>
               <h3 className="text-2xl font-bold">Let’s build your next winning creatives</h3>
               <div className="mt-6 space-y-4 text-white/70">
-                <div className="flex items-center gap-3"><Mail className="h-4 w-4" /><span>hello@vetraxai.com</span></div>
-                <div className="flex items-center gap-3"><Instagram className="h-4 w-4" /><span>@vetraxai</span></div>
-                <div className="flex items-center gap-3"><Twitter className="h-4 w-4" /><span>@vetraxai</span></div>
-                <div className="flex items-center gap-3"><Globe className="h-4 w-4" /><span>vetraxai.com</span></div>
+                <div className="flex items-center gap-3"><Mail className="h-4 w-4" /><span>ultimatemoxie@vetraxai.com</span></div>
+                <div className="flex items-center gap-3"><Instagram className="h-4 w-4" /><a href="https://www.instagram.com/vetraxai/" target="_blank" rel="noreferrer" className="hover:text-white transition">@vetraxai</a></div>
+                <div className="flex items-center gap-3"><Twitter className="h-4 w-4" /><a href="https://x.com/vetraxai" target="_blank" rel="noreferrer" className="hover:text-white transition">@vetraxai</a></div>
+                <div className="flex items-center gap-3"><Globe className="h-4 w-4" /><a href="https:/vetraxai.com" terget="_blank" rel="noreferrer" className="hover:text-white translation">vetraxai.com</a></div>
               </div>
             </div>
 
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 liquid-glass">
               <p className="mb-4 text-sm uppercase tracking-[0.25em] text-fuchsia-300/80">Founder</p>
-              <div className="inline-flex h-14 w-14 items-center justify-center rounded-3xl border border-white/10 bg-white/10 icon-chip"><User className="h-6 w-6 text-white" /></div>
-              <h3 className="mt-4 text-2xl font-bold">Founder Name</h3>
-              <p className="mt-2 text-white/65">Add your short founder bio here so brands feel there is a real operator behind the agency.</p>
+              <div className="h-16 w-16 overflow-hidden rounded-3xl border border-white/10 bg-white/10 icon-chip">
+  <img
+    src="/founder/ultimate-moxie.jpg"
+    alt="Ultimate Moxie"
+    className="h-full w-full object-cover"
+  />
+</div>
+              <h3 className="mt-4 text-2xl font-bold">Ultimate Moxie</h3>
+              <p className="mt-2 text-white/65">Founder of VetraxAI. Building AI-powered UGC ad creatives for ecommerce and TikTok Shop brands that need more winning creatives.</p>
               <div className="mt-6 space-y-4 text-white/70">
-                <div className="flex items-center gap-3"><Instagram className="h-4 w-4" /><span>@founderhandle</span></div>
-                <div className="flex items-center gap-3"><Twitter className="h-4 w-4" /><span>@founderhandle</span></div>
+                <div className="flex items-center gap-3"><Instagram className="h-4 w-4" /><a href="https://www.instagram.com/ultimatemoxie/" target="_blank" rel="noreferrer" className="hover:text-white transition">@ultimatemoxie</a></div>
+                <div className="flex items-center gap-3"><Twitter className="h-4 w-4" /><a href="https://x.com/ultimate_moxie" target="_blank" rel="noreferrer" className="hover:text-white transition">@ultimate_moxie</a></div>
               </div>
             </div>
           </div>
