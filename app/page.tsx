@@ -638,7 +638,7 @@ const samples = [
                 <div className="flex items-center gap-3"><Mail className="h-4 w-4" /><span>ultimatemoxie@vetraxai.com</span></div>
                 <div className="flex items-center gap-3"><Instagram className="h-4 w-4" /><a href="https://www.instagram.com/vetraxai/" target="_blank" rel="noreferrer" className="hover:text-white transition">@vetraxai</a></div>
                 <div className="flex items-center gap-3"><Twitter className="h-4 w-4" /><a href="https://x.com/vetraxai" target="_blank" rel="noreferrer" className="hover:text-white transition">@vetraxai</a></div>
-                <div className="flex items-center gap-3"><Globe className="h-4 w-4" /><a href="https:/vetraxai.com" terget="_blank" rel="noreferrer" className="hover:text-white translation">vetraxai.com</a></div>
+                <div className="flex items-center gap-3"><Globe className="h-4 w-4" /><a href="https://vetraxai.com" target="_blank" rel="noreferrer" className="hover:text-white transition">vetraxai.com</a></div>
               </div>
             </div>
 
